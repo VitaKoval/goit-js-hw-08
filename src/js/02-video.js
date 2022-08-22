@@ -10,7 +10,7 @@ player.on('timeupdate', throttle(onPlay, 1000));
 
 function onPlay(evt) {
   const timePlay = evt.seconds;
-  console.log(timePlay);
+  // console.log(timePlay);
   localStorage.setItem('videoplayer-current-time', timePlay);
 }
 

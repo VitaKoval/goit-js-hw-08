@@ -8,7 +8,10 @@ const messageInput = document.querySelector('.feedback-form textarea');
 form.addEventListener('submit', onFormSubmit);
 form.addEventListener('input', throttle(onDateInput, 500));
 
-const dataInput = {};
+const dataInput = {
+  email: '',
+  message: '',
+};
 
 populateData();
 
@@ -33,7 +36,7 @@ function onDateInput(evt) {
 
 function populateData() {
   const savedData = localStorage.getItem(STORAGE_KEY);
-  console.log(savedData);
+  // console.log(savedData);
 
   if (savedData) {
     const parsedData = JSON.parse(savedData);
